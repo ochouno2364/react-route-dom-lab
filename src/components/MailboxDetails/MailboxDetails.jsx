@@ -23,11 +23,11 @@ const MailboxDetails = (props) => {
         <>
         <h2></h2>
         <dl>
-            <dt>MailBox #:{props._id}</dt>
+            <dt>MailBox #:{singleMailbox._id}</dt>
             <dd></dd>
             <dt>Size:{singleMailbox.boxSize}</dt>
             <dd></dd>
-            <dt>Owner:{props.boxOwner}</dt>
+            <dt>Owner:{singleMailbox.boxOwner}</dt>
             <dd></dd>
         </dl>
         </>
