@@ -4,7 +4,7 @@ const MailBoxForm = () => {
 return (
     <>
     <h2>New MailBox</h2>
-    <form>
+    <form action='/mailboxes'>
      <label for='boxOwner'>Enter a Boxholder</label>
      <input type="text" name="boxOwner" id="boxOwner"required/>
      <label>Select a Box Size</label>

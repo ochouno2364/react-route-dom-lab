@@ -12,14 +12,16 @@ import MailBoxForm from './components/MailboxForm/MailBoxForm.jsx'
 function App() {
  
   const [mailboxes, setMailboxes] = useState([{
-    _id: '',
-    boxOwner: '',
-    boxSize: ''
+    _id: 0,
+    boxOwner: 'Ochodd',
+    boxSize: 'Small'
   }]);
 
 
-  const handleAddBox = (newBox) => {
-setMailboxes(...mailboxes, newBox)
+  const handleAddBox = (event, newBox) => {
+    event.preventDefault();
+    newBox._id + 1;
+setMailboxes({...mailboxes, newBox})
   }
 
   return (
@@ -29,7 +31,7 @@ setMailboxes(...mailboxes, newBox)
     <Routes>
       <Route path='/' element={<h3>HomePage</h3>} />
       <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes} />} />
-      <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes._id} />}/>
+      <Route path='/mailboxes/:mailboxId' element={<MailboxDetails mailboxes={mailboxes} />}/>
       <Route path='/new-mailbox' element={<MailBoxForm handleAddBox={handleAddBox}/>}/>
     </Routes>
     </>

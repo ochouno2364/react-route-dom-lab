@@ -5,8 +5,8 @@ const MailboxList = (props) => {
         <>
         <section className='mailboxsqr'>
         <ul>
-            {props.mailboxes.map((currentMailbox) => (
-                <li key={currentMailbox._id}><Link to={`/mailboxes/${currentMailbox._id}`}>MailBox{currentMailbox._id}</Link></li>
+            {props.mailboxes.map((currentBox) => (
+                <li key={currentBox._id}><Link to={`/mailboxes/${currentBox._id}`}>MailBox{currentBox._id}</Link></li>
             ))}
         </ul>
         </section>
